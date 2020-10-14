@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-ligther: hsl(179, 62%, 43%, 0.8);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --bg-color: #e5eff5;
+    --border-radius: 1rem;
+    --pad: 4rem;
+    --break-mobile: 650px;
+}
+
+html {
+    /*esto hace que si el tamaño de fuente es de 16px 
+    hace que el tamaño de fuente sea de 10px un 1rem= 10px*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.card-wraper {
+    max-width: 620px;
+    min-height: 455px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.community {
+    width: 100%;
+    background-color: white;
+    padding: var(--pad);
+}
+
+.community__title {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.community__subtittle {
+    color: var(--bright-yellow);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cummunity__content {
+    color: var(--grayish-blue);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.subscription {
+    width: 50%;
+    padding: var(--pad);
+    background-color: var(--cyan);
+    color: var(--light-gray);
+}
+
+.subscription__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.subscription__cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subscription__detail {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.subscription__content {
+    margin-bottom: 2.5rem;
+    font-size: 1.4rem;
+}
+
+.subscription__button {
+    width: 100%;
+    padding-top: 1.4rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.about {
+    width: 50%;
+    padding: var(--pad);
+    background-color: var(--cyan-ligther);
+    color: var(--light-gray);
+}
+
+.about__title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.about__reasons {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.about__reson {
+    margin-bottom: 0.3rem;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 650px) {
+    .main {
+        height: 150vh;
+    }
+    .card-wraper {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .subscription {
+        width: 100%;
+    }
+    .about {
+        width: 100%;
+    }
+}
